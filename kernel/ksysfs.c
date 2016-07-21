@@ -30,7 +30,6 @@ static struct kobj_attribute _name##_attr = \
 static struct kobj_attribute _name##_attr = \
 	__ATTR(_name, 0444, _name##_show, _name##_store)
 
-#if defined(CONFIG_HOTPLUG)
 /* current uevent sequence number */
 static ssize_t uevent_seqnum_show(struct kobject *kobj,
 				  struct kobj_attribute *attr, char *buf)

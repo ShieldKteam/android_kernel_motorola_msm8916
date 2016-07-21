@@ -27,14 +27,13 @@ export ARCH=arm
 export SUBARCH=arm
 export CROSS_COMPILE=/home/anderson/uber-4.9/bin/arm-eabi-
 export KBUILD_BUILD_USER="anderson"
-export KBUILD_BUILD_HOST="mau"
+export KBUILD_BUILD_HOST="localhost"
 echo -e "$cyan***********************************************"
 echo "          Compiling kernel                          "   
 echo -e "**********************************************$nocol"
 rm -f arch/arm/boot/dts/*.dtb
 rm -f arch/arm/boot/dt.img
 rm -f flash_zip/boot.img
-make clean && make mrproper
 echo -e " Initializing defconfig"
 make osprey_defconfig
 echo -e " Building kernel"
