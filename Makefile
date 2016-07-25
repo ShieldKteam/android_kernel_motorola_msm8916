@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 10
 SUBLEVEL = 49
-EXTRAVERSION = -r2
+EXTRAVERSION = -r3
 NAME = TOSSUG Baby Fish
 
 # *DOCUMENTATION*
@@ -387,9 +387,10 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
+                   -Wmaybe-uninitialized \
 		   -mcpu=cortex-a53 -mtune=cortex-a53 \
-            -fmodulo-sched -fmodulo-sched-allow-regmoves \
-           -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
+                   -fmodulo-sched -fmodulo-sched-allow-regmoves \
+                   -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
  		   -fno-aggressive-loop-optimizations \
  		   -fno-delete-null-pointer-checks \
            -std=gnu89
